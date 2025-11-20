@@ -76,7 +76,7 @@ export default function ContactUs()
             className=" bg-gray-100 border-1 border-gray-200 rounded-sm p-2 mt-2  h-[200px] md:h-[200px] w-[290px] md:w-[600px]"
           />
         </div>
-        <button className="text-lg md:text-[18px] md:mb-0 mb-[60px] py-0.5 hover:text-white hover:bg-black md:rounded-2xl  bg-[#806640] h-[70px] w-[70%] md:h-[40px] md:w-[150px] mt-[100px]  md:mt-[30px] shadow-xs shadow-amber-500">
+        <button className="text-lg md:text-[18px] md:mb-0 mb-[60px] py-0.5 hover:text-white hover:bg-black md:rounded-2xl  text-white bg-[#806640] h-[70px] w-[70%] md:h-[40px] md:w-[150px] mt-[100px]  md:mt-[30px] shadow-xs shadow-amber-500">
           Get in Touch
         </button>
       </div>
