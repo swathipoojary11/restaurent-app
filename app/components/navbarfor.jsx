@@ -14,16 +14,17 @@ export default function Navbar()
         /> 
         <NavButton title="Menu" path="/menu"/>
         <NavButton title="Contact" path="/contactus"/>*/}
+        <img
+          className="md:h-[40px] h-[70px]"
+          src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
+        />
         <button type='button' className="hidden md:block mr-[30px]" onClick={(event)=>{
           router.push(`/menu`)}}>Home</button>
          
         <button  type='button'  className="hidden md:block mr-[30px] "onClick={(event)=>{
           router.push(`/aboutus`)
         }}>About</button>
-        <img
-          className="md:h-[40px] h-[70px]"
-          src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
-        />
+        
         <button type='button' className="hidden md:block mr-[30px]" onClick={(event)=>{
           router.push(`/menu`)}}>Menu</button>
         <button type='button' className="hidden md:block mr-[30px]" onClick={(event)=>{
@@ -31,18 +32,3 @@ export default function Navbar()
       </nav>
 )
 }
-//here  button is common so i use component 
-//path is something i use here in component so that it routes when the 
-// button  is called
-
-{/*function NavOption( {title,path})
-{
-  return(
-    <button type='button' className="hidden md:block mr-[30px]" onClick={(event)=>{
-          router.push(path)}}>
-      {title}
-    </button>
-  )
-}*/}
-
-
