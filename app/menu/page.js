@@ -1,165 +1,48 @@
 
 "use client"
-import Navbar from "../components/navbarfor";
+import Fastdeliver from "./fastdelivery";
+import BookTable from "../components/booking";
+import Hero from "../components/hero";
+import Navbar from "../components/navbar";
+import MenuCardMEnu from "./menucard";
+import FooterComponent from "../components/footer";
 export default function Menu()
 {
+  const mainImg="https://restan-nextjs.vercel.app/assets/img/shape/5.jpg"
     return(
-         < div className="h-full md:min-h-screen w-full overflow-x-hidden">
+         < div className="dark:bg-black  h-full md:min-h-screen w-full overflow-x-hidden">
            <Navbar/>
-        < div className=" bg-[url('https://restan-nextjs.vercel.app/assets/img/shape/5.jpg')] flex flex-col h-[300px] md:h-[300px] w-full justify-center items-center text-center text-3xl md:text-5xl font-bold text-white bg-cover object-contain bg-center">
-             Restaurant Food Menu
-           </div>
+        <Hero
+        backgroundImage={mainImg}
+        title="Restaurent menu"
+        subtitle="Home"
+      />
 
       {/*menu category component */}
       <div className="flex flex-col  md:m-auto h-auto w-full  j items-center">
-        <div className=" font-bold text-3xl md:text-md text-[#806640] mt-[100px]  md:mt-[50px]">
+       <div className=" font-bold text-3xl md:text-md text-[#806640] mt-[100px]  md:mt-[50px]">
           CATEGORY
         </div>
-        <div className=" font-semibold  md:text-center-none text-center text-3xl text-wrap  w-[80%] md:w-full md:text-6xl mt-[50px]  md:mt-[20px]">
+        <div className=" font-semibold  md:text-center-none text-center text-3xl text-wrap  w-[80%] md:w-full md:text-6xl mt-[50px] dark:text-white  md:mt-[20px]">
           Choose Your Best Food
         </div>
-        <div className=" flex flex-col md:flex-row h-auto w-[90%] ">
+        
+       <div className="  md:mt-[50px]  flex flex-col md:flex-row h-auto w-[90%] ">
           {/* 2 image   h-[1500px] md:h-[450px] md:w-1/4">  */}
-          <div className=" m rounded-2xl flex flex-col  bg-white border-1 border-gray-200 h-[550px] md:h-[450px] md:w-1/4">
-            <img
-              className="rounded-t-2xl"
-              src="https://www.creativefabrica.com/wp-content/uploads/2023/06/19/AI-Generated-Food-Dessert-Images-Graphics-72496513-1.jpg"
-            />
-            <div className="flex flex-row md:h-[70px] w-full  ">
-              <div className="flex w-1/2 md:mt-[0px] mt-[30px] h-[80px] md:h-full items-center rounded-r-full md:rounded-r-4xl bg-gray-200 border-1 border-gray-500">
-                <div className=" ml-[60px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F7.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px]  rounded-full bg-amber-500"></div>
-
-                <div className=" border-2 border-white bg-cover -ml-[20px] bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-                <div className=" -ml-[20px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-              </div>
-              <div className="flex   items-center md:ml-[60px] m-auto  text-4xl md:text-3xl font-bold text-black md:mt-[0px] mt-[50px]">
-                5.0
-              </div>
-            </div>
-            <div className=" hover:text-yellow-700 mt-[30px]  md:mt-[20px] font-semibold text-2xl md:text-2xl ml-[40px]">
-              Pizza Slice
-            </div>
-            <div className="mt-[30px] md:mt-[20px] ml-[40px] text-2xl md:text-sm text-gray-500">
-              Cheese, Ham & Pineapple
-            </div>
-            <button className="mt-[30px] md:mt-[20px] ml-[10px]  md:-ml-[40px] text-2xl  font-bold text-yellow-700">
-              ORDER NOW
-            </button>
-          </div>
-          {/*2nd block */}
-         <div className=" m rounded-2xl flex flex-col  bg-white border-1 border-gray-200 h-[550px] md:h-[450px] md:w-1/4 md:mt-[0px] mt-[30px]">
-            <img
-              className="rounded-t-2xl"
-              src="https://www.creativefabrica.com/wp-content/uploads/2023/06/19/AI-Generated-Food-Dessert-Images-Graphics-72496513-1.jpg"
-            />
-            <div className="flex flex-row md:h-[70px] w-full  ">
-              <div className="flex w-1/2 md:mt-[0px] mt-[30px] h-[80px] md:h-full items-center rounded-r-full md:rounded-r-4xl bg-gray-200 border-1 border-gray-500">
-                <div className=" ml-[60px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F7.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px]  rounded-full bg-amber-500"></div>
-
-                <div className=" border-2 border-white bg-cover -ml-[20px] bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-                <div className=" -ml-[20px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-              </div>
-              <div className="flex   items-center md:ml-[60px] m-auto  text-4xl md:text-3xl font-bold text-black md:mt-[0px] mt-[50px]">
-                5.0
-              </div>
-            </div>
-            <div className=" hover:text-yellow-700 mt-[30px]  md:mt-[20px] font-semibold text-2xl md:text-2xl ml-[40px]">
-              Pizza Slice
-            </div>
-            <div className="mt-[30px] md:mt-[20px] ml-[40px] text-2xl md:text-sm text-gray-500">
-              Cheese, Ham & Pineapple
-            </div>
-            <button className="mt-[30px] md:mt-[20px] ml-[10px]  md:-ml-[40px] text-2xl  font-bold text-yellow-700">
-              ORDER NOW
-            </button>
-          </div>
-          {/*3nd block */}
-          <div className=" m rounded-2xl flex flex-col  bg-white border-1 border-gray-200 h-[550px] md:h-[450px] md:w-1/4 md:mt-[0px] mt-[30px]">
-            <img
-              className="rounded-t-2xl"
-              src="https://www.creativefabrica.com/wp-content/uploads/2023/06/19/AI-Generated-Food-Dessert-Images-Graphics-72496513-1.jpg"
-            />
-            <div className="flex flex-row md:h-[70px] w-full  ">
-              <div className="flex w-1/2 md:mt-[0px] mt-[30px] h-[80px] md:h-full items-center rounded-r-full md:rounded-r-4xl bg-gray-200 border-1 border-gray-500">
-                <div className=" ml-[60px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F7.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px]  rounded-full bg-amber-500"></div>
-
-                <div className=" border-2 border-white bg-cover -ml-[20px] bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-                <div className=" -ml-[20px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-              </div>
-              <div className="flex   items-center md:ml-[60px] m-auto  text-4xl md:text-3xl font-bold text-black md:mt-[0px] mt-[50px]">
-                5.0
-              </div>
-            </div>
-            <div className=" hover:text-yellow-700 mt-[30px]  md:mt-[20px] font-semibold text-2xl md:text-2xl ml-[40px]">
-              Pizza Slice
-            </div>
-            <div className="mt-[30px] md:mt-[20px] ml-[40px] text-2xl md:text-sm text-gray-500">
-              Cheese, Ham & Pineapple
-            </div>
-            <button className="mt-[30px] md:mt-[20px] ml-[10px]  md:-ml-[40px] text-2xl  font-bold text-yellow-700">
-              ORDER NOW
-            </button>
-          </div>
-          {/*4nd block */}
-          <div className=" m rounded-2xl flex flex-col  bg-white border-1 border-gray-200 h-[550px] md:h-[450px] md:w-1/4 md:mt-[0px] mt-[30px]">
-            <img
-              className="rounded-t-2xl"
-              src="https://www.creativefabrica.com/wp-content/uploads/2023/06/19/AI-Generated-Food-Dessert-Images-Graphics-72496513-1.jpg"
-            />
-            <div className="flex flex-row md:h-[70px] w-full  ">
-              <div className="flex w-1/2 md:mt-[0px] mt-[30px] h-[80px] md:h-full items-center rounded-r-full md:rounded-r-4xl bg-gray-200 border-1 border-gray-500">
-                <div className=" ml-[60px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F7.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px]  rounded-full bg-amber-500"></div>
-
-                <div className=" border-2 border-white bg-cover -ml-[20px] bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-                <div className=" -ml-[20px] border-2 border-white bg-cover bg-center bg-[url('https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fteam%2F6.jpg&w=640&q=75')] md:h-[35px] md:w-[35px] w-[50px] h-[50px] rounded-full bg-amber-500"></div>
-              </div>
-              <div className="flex   items-center md:ml-[60px] m-auto  text-4xl md:text-3xl font-bold text-black md:mt-[0px] mt-[50px]">
-                5.0
-              </div>
-            </div>
-            <div className=" hover:text-yellow-700 mt-[30px]  md:mt-[20px] font-semibold text-2xl md:text-2xl ml-[40px]">
-              Pizza Slice
-            </div>
-            <div className="mt-[30px] md:mt-[20px] ml-[40px] text-2xl md:text-sm text-gray-500">
-              Cheese, Ham & Pineapple
-            </div>
-            <button className="mt-[30px] md:mt-[20px] ml-[10px]  md:-ml-[40px] text-2xl  font-bold text-yellow-700">
-              ORDER NOW
-            </button>
-          </div>
+         <div className="space-x-2 md:mt-[50px]  flex flex-col md:flex-row h-auto w-[90%] ">
+           <MenuCardMEnu img="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F1.jpg&w=1920&q=75" rating=" 5.0" title="Pizza Slice" desc="Cheese, Ham & Pineapple"/>
+           <MenuCardMEnu img="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F2.jpg&w=1920&q=75" rating=" 4.0" title="Cheese Burger" desc="Cheese, Ham & Pineapple"/>
+           <MenuCardMEnu img="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F4.jpg&w=1920&q=75" rating=" 3.0" title="Chocalate Chip" desc="Cheese, Ham & Pineapple"/>
+           <MenuCardMEnu img="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F4.jpg&w=1920&q=75" rating=" 5.0" title="MeatBalls Pasta" desc="Cheese, Ham & Pineapple"/>
+         </div>
+         
+       </div>
+      <Fastdeliver/>
+      <div className="md:h-[600px] flex flex-col  items-center w-full dark:bg-zinc-800 dark:text-wh bg-amber-50">
+        <div className=" font-bold text-md dark:text-yellow-500 text-yellow-800 mt-[50px]">
+          HAPPY CUSTOMES
         </div>
-      </div>
-      <div className=" mt-[60px] flex flex-row h-[600px] md:h-[500px] w-full bg-red-950 items-center ">
-        <div className="flex flex-col ">
-          <div className=" mt-[50px] ml-[50px] text-5xl w-[60%] text-white">
-            30 Minutes
-            <br /> Delivery!
-          </div>
-          <div className="text-amber-50 mt-[30px] ml-[50px]">
-            A relaxing and pleasant atmosphere, good jazz, dinner, and
-            cocktails. The <br/>
-            Patio Time Bar opens in the center of Florence. The only bar
-            inspired by the<br/>
-            
-            1960s, it will give you a experience that you’ll have a hard time
-            forgetting.
-          </div>
-          <button className=" mt-[30px] ml-[50px] bg-yellow-700 text-white hover:text-black hover:bg-white h-[50px] w-[150px] ">
-            Order now
-          </button>
-        </div>
-        <div className="  w-[40%] ">
-          <img
-            className=" ml-[250] mt-[50px] h-[500px]"
-            src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F11.png&w=1920&q=75"
-          />
-        </div>
-      </div>
-      <div className="md:h-[600px] flex flex-col  items-center w-full bg-amber-50">
-        <div className=" font-bold text-md  text-yellow-800 mt-[50px]">
-          HAPPY CUSTOMERS
-        </div>
-        <div className=" font-semibold text-3xl mt-[20px]">
+        <div className=" dark:text-white font-semibold text-3xl mt-[20px]">
           Our Customers Feedback
         </div>
         <div className="  mt-[30px]  items-center flex flex-col md:flex-row">
@@ -170,7 +53,7 @@ export default function Menu()
             />
           </div>
           {/*text section */}
-          <div className=" md:ml-[100px] flex items-center flex-col">
+          <div className=" dark:text-white md:ml-[100px] flex items-center flex-col">
             <div className="text-gray-500">(5/5)</div>
             <div className="ml-[20px] md:ml-[0px] text-3xl font-semibold mt-[10px]">
               The best food ever
@@ -185,24 +68,24 @@ export default function Menu()
               Resolve parties but why she shewing.
             </div>
             <hr />
-            <div className="ml-[20px] md:ml-[0px] mt-[30px] text-black text-2xl">
+            <div className="dark:text-white ml-[20px] md:ml-[0px] mt-[30px] text-black text-2xl">
               Matthew J. Wyman
               <br />
-              <span className="mt-[30px] font-bold text-sm  text-yellow-800 mt-[50px]>SENIOR CONSULTANT">
+              <span className="dark:text-white mt-[30px] font-bold text-sm  text-yellow-800 mt-[50px]>SENIOR CONSULTANT">
                 SENIOR CONSULTANT
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-amber-600 mt-[100px] flex md:flex-row  md:h-[500px] flex-col w-full">
+      <div className="dark:border-1 dark:border- mt-[100px] flex md:flex-row  md:h-[500px] flex-col w-full  bg-blue-950">
         <div>
           <div className="mt-[100px] text-2xl font-semibold text-white ">RESERVATION </div>
           <div className="mt-[50px]  text-4xl text-white font-semibold">
             Reservation Your Favorite <br />
             Private Table
           </div>
-          <div className="mt-[50px] text-white text-sm font-semibold">
+          <div className="mt-[50px] dark:text-white text-sm font-semibold">
             A relaxing and pleasant atmosphere, good jazz, dinner, and
             cocktails. The Patio Time Bar
             <br />
@@ -210,50 +93,15 @@ export default function Menu()
             it will give you a <br />
             experience that you’ll have a hard time forgetting.
           </div>
-          <div className="text-white flex flex-row">
+          <div className="dark:text-white flex flex-row">
             <div className="text-2xl mt-[30px]  ">Launch Menu|</div>
             <div className="text-2xl mt-[30px]">Dinner Menu</div>{" "}
           </div>
         </div>
-        <div className=" md:mt-[0px] mt-[200px]  md:ml-[100px] -translate-y-1/4  bg-zinc-900  text-white md:w-[400px] rounded-3xl shadow-2xl px-8 py-10">
-          
-
-          <h2 className="text-3xl font-semibold mb-8 text-center mt-4">
-            Book a table
-          </h2>
-
-          <form className="flex flex-col space-y-4">
-            <input
-              type="tel"
-              placeholder="Phone"
-              className= " text-white w-full px-3 py-2 border border-gray-300 rounded-lg "
-            />
-            <select className="w-full border border-gray-300 rounded-lg px-3 py-2 ">
-              <option>1 Person</option>
-              <option>2 Person</option>
-              <option>3 Person</option>
-              <option>4 Person</option>
-            </select>
-            <input
-              type="date"
-              placeholder="Date"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg "
-            />
-            <select className="w-full border border-gray-300 rounded-lg px-3 py-2 ">
-              <option>12:00 PM</option>
-              <option>1:00 PM</option>
-              <option>2:00 PM</option>
-              <option>7:00 PM</option>
-            </select>
-            <button
-              type="submit"
-              className="w-[70%] md:w-full bg-[#806640] text-white rounded-lg py-2 font-semibold hover:bg-black "
-            >
-              Book Now
-            </button>
-          </form>
-        </div>
+        <BookTable/>
       </div>
+      <FooterComponent/>
+    </div>
     </div>
     );
 }
