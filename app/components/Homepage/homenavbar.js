@@ -23,7 +23,7 @@ export default function HomepageNavbar()
           router.push(`/blog`)}}>Blog</button>
         <img
           className="md:h-[40px] h-[70px]"
-         src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
+         src="https://png.pngtree.com/png-vector/20250910/ourmid/pngtree-restaurant-logo-with-chef-hat-and-fork-spoon-symbol-png-image_17398231.webp"
       />
 
     
