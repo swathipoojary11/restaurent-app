@@ -27,11 +27,11 @@ export default function Home()
           {/* The row of cards */}
           <div className=" md:p-0 p-2 flex  flex-col md:flex-row mt-[30px] md:ml-[50px] gap-6">
             {/* Card 1 */}
-            <SpecialCategoryComponent image="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F26.jpg&w=1920&q=75" title="Desserts" subtitle="Cake" mobileShow={true}/>
+            <SpecialCategoryComponent image="https://www.between2kitchens.com/wp-content/uploads/2022/03/German-Black-Forest-Cake-in-a-glass-process-41-of-1.jpg" title="Desserts" subtitle="Cake" mobileShow={true}/>
             {/*card 2 */}
-            <SpecialCategoryComponent image="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F20.jpg&w=1920&q=75" title="Drinks"   subtitle="Mocktail"/>
+            <SpecialCategoryComponent image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJwDewTrjCW0pX-lOjwLC2cN6PCQ8wdBBfibHBeM-5W0lkan1AzHUYpVE&s=10" title="Drinks"   subtitle="Mocktail"/>
              {/* Card 3 */}
-            <SpecialCategoryComponent image="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F10.jpg&w=1920&q=75" title="Chats"   subtitle="Panipuri"/>
+            <SpecialCategoryComponent image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAsKPGLb3skXaWvpWaaMXOtnXFpt2JwNKhxNCn6WU0_ZyHZfI-MGpzxxm8&s=10" title="Chats"   subtitle="Panipuri"/>
           </div>
         </div>
       </div>
